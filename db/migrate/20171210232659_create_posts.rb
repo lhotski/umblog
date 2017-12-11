@@ -10,6 +10,8 @@ class CreatePosts < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+    execute 'ALTER TABLE "posts" ADD CONSTRAINT check_subject CHECK (subject != \'\')'
+    execute 'ALTER TABLE "posts" ADD CONSTRAINT check_body CHECK (body != \'\')'
   end
   def down
     drop_table :posts
