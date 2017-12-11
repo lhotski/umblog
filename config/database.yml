@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  database: umblog
+  host: localhost
+  user: umblog
+  password: umblog
+
+test:
+  adapter: postgresql
+  database: umblog_test
+  host: localhost
+  user: umblog
+  password: umblog
