@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20171210233157) do
     t.string "login", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["login"], name: "index_users_on_login"
+    t.index ["login"], name: "index_users_on_login", unique: true
   end
 
 end
