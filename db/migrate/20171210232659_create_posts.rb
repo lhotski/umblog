@@ -1,5 +1,5 @@
 class CreatePosts < ActiveRecord::Migration[5.1]
-  def change
+  def up
     create_table :posts do |t|
       t.references :user
 
@@ -10,5 +10,8 @@ class CreatePosts < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+  end
+  def down
+    drop_table :posts
   end
 end
